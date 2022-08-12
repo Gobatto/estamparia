@@ -41,15 +41,6 @@ html {
     background-color: #ff8000;
   }
   
-  header .logo-small {
-    display: none;
-  }
-  
-  header .logo-small,
-  header .logo-big {
-    flex-grow: 1;
-  }
-  
   nav li {
     display: inline;
     padding-right: 2rem;
@@ -63,10 +54,6 @@ html {
     header .logo-big {
       display: none;
     }
-  
-    header .logo-small {
-      display: block;
-    }
   }
   
   @media only screen and (max-width: 540px) {
@@ -74,10 +61,6 @@ html {
       flex-direction: column;
       padding-left: 0;
       padding-right: 0;
-    }
-  
-    header .logo-small {
-      margin-bottom: 1rem;
     }
   }
   
@@ -92,20 +75,6 @@ html {
     text-align: center;
   }
   
-  #banner:before { /* Orange Overlay */
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background-color: rgba(255, 128, 0, 0.75) */
-  }
-  
-  #banner * {
-    position: relative; /* Makes elements display above overlay. */
-  }
-  
   h1 {
     padding-top: 10.4375rem;
     padding-bottom: 1.25rem;
@@ -115,7 +84,7 @@ html {
   }
   
   #banner p {
-    color: #fff;
+    color: #000;
     line-height: 1.5;
     font-size: 1.375rem;
   }
@@ -138,6 +107,7 @@ html {
   #color-guide {
     padding: 3.875rem 15% 13.5rem 15%;
     background-color: #1D69AE;
+    color: #ff8000;
   }
   
   #color-guide .introduction {
@@ -152,7 +122,6 @@ html {
     margin-bottom: 2.4375rem;
     line-height: 1;
     font-size: 2rem;
-    color: #ff8000;
   }
   
   #color-guide .color {
@@ -184,12 +153,7 @@ html {
     line-height: 1.4;
     color: #1D69AE;
   }
-  
-  footer a {
-    margin-bottom: 5rem;
-  }
-  
-  
+    
   @media only screen and (max-width: 560px) {
     footer {
       padding: 1rem 15% 0 15%;
