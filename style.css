@@ -10,7 +10,9 @@ html {
   
   a {
     text-decoration: none;
-    color: inherit;
+    color: #1D69AE;
+    font-size: 24px;
+    text-align: center;
   }
   
   strong {
@@ -138,6 +140,18 @@ html {
       align-items: center;
     }
   }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .col {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   
   
   /* Footer */
@@ -153,10 +167,27 @@ html {
     z-index: 2;
     bottom: 0;
   }
+
+  .follow p {
+    font-weight: 800;
+    font-size: 39px;
+    margin: 20px;
+  }
+
+  .follow a {
+    padding: 16px;
+  }
+  
+  .follow a:hover {
+    color: rgb(6, 66, 57);
+  }
+  
+  i {
+    font-size: 40px;
+  }
     
   @media only screen and (max-width: 560px) {
     footer {
       padding: 1rem 15% 0 15%;
     }
   }
-  
