@@ -1,6 +1,6 @@
 /* Universal Styles */
 
-html, body, h1, h2, h3, footer {
+html, body, h1, h2, h3 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -16,10 +16,10 @@ html {
   body {
     font-family: "Open Sans", sans-serif;
     line-height: 1;
+    background-color: #1D69AE;
   }
   
   a {
-    text-decoration: none;
     color: #1D69AE;
     font-size: 24px;
     align-items: center;
@@ -34,29 +34,73 @@ html {
   
   /* Header */
   
-  header {
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    background-color: #ff8000;
+  .container {
+    width: 100%;
+    margin: 0 auto;
   }
   
-  nav li {
-    display: inline;
-    padding-right: 2rem;
-    align-items: center;
+  header {
+    background-color: #FF8000;
+    color: #1D69AE;
+    position: relative;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    z-index: 2;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  header::after {
+    content: '';
+    display: table;
+    clear: both;
   }
   
   nav {
+    float: center;
+  }
+  
+  nav ul {
+    margin: 16px 24px;
+    padding: 0;
+    list-style: none;
     align-items: center;
   }
   
-  @media only screen and (max-width: 540px) {
-    header {
-      flex-direction: column;
-      padding-left: 0;
-      padding-right: 0;
-    }
+  nav li {
+    display: inline-block;
+    margin-left: 40px;
+    padding-top: 23px;
+    position: relative;
+  }
+  
+  nav a {
+    color: #1D69AE;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 24px;
+  }
+  
+  nav a:hover {
+    color: #000;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #444;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    width: 100%;
   }
   
   /* Banner */
@@ -71,17 +115,20 @@ html {
   }
   
   h1 {
-    padding-top: 10.4375rem;
-    padding-bottom: 1.25rem;
+    padding-top: 5rem;
+    margin-bottom: 1.25rem;
     font-family: 'Finger Paint', cursive;
     font-size: 8rem;
     color: #1D69AE;
+    align-items: center;
   }
   
   #banner p {
     color: #000;
     line-height: 1.5;
     font-size: 1.375rem;
+    margin-top: 160px;
+    font-weight: 800;
   }
   
   @media only screen and (max-width: 820px) {
@@ -97,89 +144,147 @@ html {
     }
   }
   
-  /* Color Guide */
-  
-  #color-guide {
-    padding: 3.875rem 15% 13.5rem 15%;
-    background-color: #1D69AE;
-    color: #ff8000;
-  }
-  
-  #color-guide .introduction {
-    padding: 0 10%;
-    margin-bottom: .75rem;
-    text-align: center;
-    font-size: 1.375rem;
-    line-height: 1.4;
-  }
-  
-  #color-guide h2 {
-    margin-bottom: 2.4375rem;
-    line-height: 1;
-    font-size: 2rem;
-  }
-  
-  #color-guide .color {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 5.25rem;
-  }
-  
-  
-  
-  @media only screen and (max-width: 820px) {
-    #color-guide .color {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+  .carousel {
+    margin: 40px 60px;
+    /* margin-right: 15%; */
+}
 
-  .cards {
-    position: relative;
-    display: flex; 
-    flex-direction: column;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    max-width: 200px;
-  }
-  
-  .col {
-    align-items: stretch;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
-    position: relative;
-  }
-
-  .photo {
-    flex: 1 0 0%;
-    margin: 3px;
+ul.slides {
     display: block;
     position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
     width: 100%;
-    
-  }
-  
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #1D69AE;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
   
   /* Footer */
   
   footer {
-    background-color: #ff8000;
+    background-color: #FF8000;
     color: #1D69AE;
-    position: relative;
+    position: inherit;
     padding: 30px 0;
     text-align: center;
-    font-size: 24px;
+    font-size: 32px;
     width: 100%;
-    z-index: 2;
     bottom: 0;
-  }
-
-  .follow p {
-    font-weight: 800;
-    font-size: 39px;
-    margin: 20px;
   }
 
   .follow a {
@@ -187,7 +292,7 @@ html {
   }
   
   .follow a:hover {
-    color: #5c3004;
+    color: #000;
   }
   
   i {

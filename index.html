@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Estamparia Artesanal</title>
+  <title>Alimac Estamparia Artesanal</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
@@ -11,51 +11,97 @@
   <meta charset="utf-8">
 </head>
 <body>
+  
   <!-- Header -->
+
   <header>
-    <nav>
-      <ul>
-        <li><a href="https://www.instagram.com/estamparia_paulo/" target="_blank"><strong>Instagram</strong></a></li>
-        <li><a href="https://www.facebook.com/Alimac-Estamparia-Paulo-506272919799418/" target="_blank"><strong>Facebook</strong></a></li>
-        <li><a href="https://wa.me/5511992768282" target="_blank"><strong>Whatsapp</strong></a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="https://www.instagram.com/estamparia_paulo/" target="_blank"><strong>Instagram</strong></a></li>
+          <li><a href="https://www.facebook.com/Alimac-Estamparia-Paulo-506272919799418/" target="_blank"><strong>Facebook</strong></a></li>
+          <li><a href="https://wa.me/5511992768282" target="_blank"><strong>Whatsapp</strong></a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Banner -->
+  
   <div id="banner">
-    <h1>Alimac Estamparia Artesanal</h1>
+    <h1>Alimac</h1>
+    <h1>Estamparia</h1>
     <p>Há 45 anos inovando no mercado de estampas (silk-screen), bordado, sublimação e hotfix.</p>
   </div>
 
-  <!-- Color Guide -->
-  <div id="color-guide">
-    <div class="introduction">
-      <h2 id="catalogo">Catálogo</h2>
-      <p>Aqui estão alguns serviços mais procurados:</p>
-      <div class="cards">
-        <div class="col">
-          <div class="photo">
-            <img src="https://images.unsplash.com/photo-1647891941746-fe1d53ddc7a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80">
+  <!-- Carousel -->
+
+  <div>
+    <div class="carousel">
+      <ul class="slides">
+        <input type="radio" name="radio-buttons" id="img-1" checked />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="https://i.pinimg.com/564x/90/16/d6/9016d673ccbab3c60a083df0cc2a1e4f.jpg">
           </div>
-          <div class="photo">
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=420&q=80">
+          <div class="carousel-controls">
+            <label for="img-3" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-2" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
           </div>
-          <div class="photo">
-            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80">
+        </li>
+        <input type="radio" name="radio-buttons" id="img-2" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="https://media.istockphoto.com/photos/serigraphy-silk-screen-print-process-at-clothes-factory-frame-and-picture-id1316050356?s=2048x2048">
           </div>
+          <div class="carousel-controls">
+            <label for="img-1" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-3" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons" id="img-3" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="https://media.istockphoto.com/id/1323816405/pt/foto/close-up-of-screen-printing-on-shirts-and-textiles.webp?s=612x612&w=is&k=20&c=1O4xxEzUjOdw03yDh8D3r9U-VWQK6ljDayXlCMo7Vvo=">
+          </div>
+          <div class="carousel-controls">
+            <label for="img-2" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-4" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons" id="img-4" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="https://i.pinimg.com/564x/bd/65/b6/bd65b6a9bed7316a7d69065ab0aa776e.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img-3" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-1" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <div class="carousel-dots">
+          <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+          <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+          <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+          <label for="img-4" class="carousel-dot" id="img-dot-4"></label>
         </div>
-        <div class="col">
-          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80">
-          <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80">
-          <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80">
-        </div>
-        <div class="col">
-          <img src="https://images.unsplash.com/photo-1557777586-f6682739fcf3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80">
-          <img src="https://images.unsplash.com/photo-1574201635302-388dd92a4c3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80">
-          <img src="https://images.unsplash.com/photo-1545291730-faff8ca1d4b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80">
-        </div>
-      </div>
+      </ul>
     </div>
   </div>
 
@@ -69,5 +115,6 @@
       <a href="https://wa.me/5511992768282" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
   </footer>
+
 </body>
 </html>
