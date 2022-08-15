@@ -1,32 +1,30 @@
 /* Universal Styles */
 
+html, body, h1, h2, h3, footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  /* vertical-align: baseline; */
+}
+
 html {
     font-size: 16px;
   }
   
   body {
     font-family: "Open Sans", sans-serif;
+    line-height: 1;
   }
   
   a {
     text-decoration: none;
     color: #1D69AE;
     font-size: 24px;
-    text-align: center;
+    align-items: center;
   }
-  
-  strong {
-    font-weight: bold;
-  }
-  
-  .image-container {
-    overflow: hidden;
-  }
-  
-  .image-container img {
-    display: block;
-    max-width: 100%;
-  }
+    
   
   @media only screen and (max-width: 990px) {
     html {
@@ -39,23 +37,18 @@ html {
   header {
     display: flex;
     align-items: center;
-    padding: .5rem 3.75rem;
+    padding: 5px;
     background-color: #ff8000;
   }
   
   nav li {
     display: inline;
     padding-right: 2rem;
+    align-items: center;
   }
   
-  nav li:last-child {
-    padding-right: 0;
-  }
-  
-  @media only screen and (max-width: 990px) {
-    header .logo-big {
-      display: none;
-    }
+  nav {
+    align-items: center;
   }
   
   @media only screen and (max-width: 540px) {
@@ -142,15 +135,30 @@ html {
   }
 
   .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    max-width: 200px;
   }
   
   .col {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: stretch;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .photo {
+    flex: 1 0 0%;
+    margin: 3px;
+    display: block;
+    position: relative;
+    width: 100%;
+    
   }
   
   
@@ -179,7 +187,7 @@ html {
   }
   
   .follow a:hover {
-    color: rgb(6, 66, 57);
+    color: #5c3004;
   }
   
   i {
