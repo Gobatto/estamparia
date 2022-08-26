@@ -85,14 +85,14 @@ html {
   }
   
   nav a:hover {
-    color: #000;
+    color: #1D69AE;
   }
   
   nav a::before {
     content: '';
     display: block;
     height: 5px;
-    background-color: #444;
+    background-color: #1D69AE;
     position: absolute;
     top: 0;
     width: 0%;
@@ -108,23 +108,25 @@ html {
   #banner {
     position: relative;
     height: 43.75rem;
-    padding: 0 25%;
-    background: url("silk-screen.png") center center no-repeat;
+    padding: 0 15%;
+    background: url("cores.avif") center center no-repeat;
     background-size: cover;
     text-align: center;
   }
   
   h1 {
-    padding-top: 5rem;
-    margin-bottom: 1.25rem;
+    padding-top: 2rem;
+
     font-family: 'Finger Paint', cursive;
     font-size: 8rem;
-    color: #1D69AE;
+    color: #FF8000;
     align-items: center;
   }
   
   #banner p {
-    color: #000;
+    color: #FF8000;
+    background-color: rgba(0, 0, 0, 0.496);
+    border-radius: 20px;
     line-height: 1.5;
     font-size: 1.375rem;
     margin-top: 160px;
@@ -273,6 +275,24 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
 
 
 input:checked + .slide-container .nav label { display: block; }
+
+.history {
+  background-color: #1D69AE;
+  color: #FF8000;
+  padding: 40px;
+}
+
+.history h2 {
+  font-size: 40px;
+  padding: 24px;
+  font-weight: bolder;
+}
+
+.history h3 {
+  font-size: 24px;
+  padding: 16px;
+}
+
   
   /* Footer */
   
