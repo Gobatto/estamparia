@@ -116,11 +116,11 @@ html {
   
   h1 {
     padding-top: 2rem;
-
     font-family: 'Finger Paint', cursive;
     font-size: 8rem;
     color: #FF8000;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.203);
   }
   
   #banner p {
